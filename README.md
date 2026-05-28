@@ -1,60 +1,152 @@
-<<<<<<< HEAD
-# Welcome to your Expo app 👋
+# 🚀 Space Predictive Analytics
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+### Global Solution 2026.1 — Cross-Platform Application Development | FIAP
 
-## Get started
+![Banner](./assets/screenshots/banner.png)
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+# 📖 Descrição
 
-2. Start the app
+O Space Predictive Analytics é um aplicativo mobile desenvolvido com React Native + Expo para monitoramento inteligente de sistemas espaciais simulados. A solução permite acompanhar indicadores críticos da missão, dashboards analíticos, comunicação orbital, sensores e energia da nave em tempo real simulado.
 
-   ```bash
-   npx expo start
-   ```
+O aplicativo também possui geração automática de alertas, persistência de configurações com AsyncStorage e gerenciamento global de estado utilizando Context API.
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+# 👨‍🚀 Equipe
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+| Nome                   | RM       |
+| ---------------------- | -------- |
+| Vitor Barbosa de Paiva | RM565303 |
+| Arthur Traldi Felix    | RM563477 |
+---
 
-## Get a fresh project
+# 📱 Telas do Aplicativo
 
-When you're ready, run:
+## Home — Dashboard Principal
+
+![Home](./assets/screenshots/Home.png)
+
+Visão geral dos indicadores da missão espacial.
+
+---
+
+## Dashboard de Sensores
+
+![Sensores](./assets/screenshots/sensores.png)
+
+Monitoramento dos sensores em tempo real.
+
+---
+
+## Dashboard de Energia
+
+![Energia](./assets/screenshots/energia.png)
+
+Indicadores de bateria e consumo energético.
+
+---
+
+## Dashboard de Comunicação
+
+![Comunicação](./assets/screenshots/comunicaçao.png)
+
+Status da telemetria e qualidade do sinal.
+
+---
+
+## Sistema de Alertas
+
+![Alertas](./assets/screenshots/alertas.png)
+
+Alertas automáticos baseados em limites críticos.
+
+---
+
+## Configurações
+
+![Configurações](./assets/screenshots/configuracoes.png)
+
+Formulário para configuração dos limites da missão.
+
+
+---
+
+# ⚙️ Funcionalidades
+
+* [x] Dashboard principal da missão
+* [x] Dashboard de sensores
+* [x] Dashboard de energia
+* [x] Dashboard de comunicação
+* [x] Sistema automático de alertas
+* [x] Persistência com AsyncStorage
+* [x] Gerenciamento global com Context API
+* [x] Navegação com Expo Router
+* [x] Formulário validado
+* [x] Interface responsiva com temática espacial
+
+---
+
+# 🛠 Tecnologias Utilizadas
+
+* React Native
+* Expo
+* Expo Router
+* TypeScript
+* Context API
+* AsyncStorage
+* React Native Chart Kit
+* Expo Vector Icons
+
+---
+
+# ▶️ Como Executar
+
+## Pré-requisitos
+
+* Node.js instalado
+* Expo Go instalado no celular
+* Android Studio Emulator ou dispositivo físico
+
+---
+
+## Instalação
+
+Clone o repositório:
 
 ```bash
-npm run reset-project
+git clone https://github.com/VitorBarbosadePaiva/gs_appdev.git
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Entre na pasta:
 
-### Other setup steps
+```bash
+cd space-predictive-analytics
+```
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+Instale as dependências:
 
-## Learn more
+```bash
+npm install
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+Execute o projeto:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+npx expo start
+```
 
-## Join the community
+Escaneie o QR Code utilizando o aplicativo Expo Go.
 
-Join our community of developers creating universal apps.
+---
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
-=======
-# gs_appdev
->>>>>>> b74087bc5394bb706073b769a4b602680544d016
+# 🎥 Vídeo de Demonstração
+
+[Clique aqui para assistir ao vídeo](https://youtube.com/)
+
+---
+
+# 📄 Licença
+
+Este projeto foi desenvolvido para fins acadêmicos — FIAP 2026.
