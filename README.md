@@ -48,7 +48,7 @@ Indicadores de bateria e consumo energético.
 
 ## Dashboard de Comunicação
 
-![Comunicação](./assets/screenshots/Comunicaçao.png)
+![Comunicação](./assets/screenshots/Comunic.png)
 
 Status da telemetria e qualidade do sinal.
 
