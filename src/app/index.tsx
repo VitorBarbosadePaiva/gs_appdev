@@ -1,98 +1,75 @@
-import * as Device from 'expo-device';
-import { Platform, StyleSheet } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { View, Text, StyleSheet, ScrollView } from "react-native";
+import { useMission } from "../../context/MissionContext";
+import { generateAlerts } from "../../utils/alertaRules";
 
-import { AnimatedIcon } from '@/components/animated-icon';
-import { HintRow } from '@/components/hint-row';
-import { ThemedText } from '@/components/themed-text';
-import { ThemedView } from '@/components/themed-view';
-import { WebBadge } from '@/components/web-badge';
-import { BottomTabInset, MaxContentWidth, Spacing } from '@/constants/theme';
+export default function Home() {
+  const { missionData, thresholds } = useMission();
+  const alerts = generateAlerts(missionData, thresholds);
 
-function getDevMenuHint() {
-  if (Platform.OS === 'web') {
-    return <ThemedText type="small">use browser devtools</ThemedText>;
-  }
-  if (Device.isDevice) {
-    return (
-      <ThemedText type="small">
-        shake device or press <ThemedText type="code">m</ThemedText> in terminal
-      </ThemedText>
-    );
-  }
-  const shortcut = Platform.OS === 'android' ? 'cmd+m (or ctrl+m)' : 'cmd+d';
   return (
-    <ThemedText type="small">
-      press <ThemedText type="code">{shortcut}</ThemedText>
-    </ThemedText>
+    <ScrollView style={styles.container}>
+      <Text style={styles.title}>Space Predictive Analytics</Text>
+      <Text style={styles.subtitle}>Dashboard Principal da Missão</Text>
+
+      <View style={styles.grid}>
+        <Card title="Temperatura" value={`${missionData.temperature}°C`} />
+        <Card title="Energia" value={`${missionData.energy}%`} />
+        <Card title="Sinal" value={`${missionData.signal}%`} />
+        <Card title="Latência" value={`${missionData.latency}ms`} />
+        <Card title="Estabilidade Orbital" value={`${missionData.orbitalStability}%`} />
+        <Card title="Alertas Ativos" value={`${alerts.length}`} danger={alerts.length > 0} />
+      </View>
+    </ScrollView>
   );
 }
 
-export default function HomeScreen() {
+function Card({ title, value, danger }: any) {
   return (
-    <ThemedView style={styles.container}>
-      <SafeAreaView style={styles.safeArea}>
-        <ThemedView style={styles.heroSection}>
-          <AnimatedIcon />
-          <ThemedText type="title" style={styles.title}>
-            Welcome to&nbsp;Expo
-          </ThemedText>
-        </ThemedView>
-
-        <ThemedText type="code" style={styles.code}>
-          get started
-        </ThemedText>
-
-        <ThemedView type="backgroundElement" style={styles.stepContainer}>
-          <HintRow
-            title="Try editing"
-            hint={<ThemedText type="code">src/app/index.tsx</ThemedText>}
-          />
-          <HintRow title="Dev tools" hint={getDevMenuHint()} />
-          <HintRow
-            title="Fresh start"
-            hint={<ThemedText type="code">npm run reset-project</ThemedText>}
-          />
-        </ThemedView>
-
-        {Platform.OS === 'web' && <WebBadge />}
-      </SafeAreaView>
-    </ThemedView>
+    <View style={[styles.card, danger && styles.cardDanger]}>
+      <Text style={styles.cardTitle}>{title}</Text>
+      <Text style={styles.cardValue}>{value}</Text>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    flexDirection: 'row',
-  },
-  safeArea: {
-    flex: 1,
-    paddingHorizontal: Spacing.four,
-    alignItems: 'center',
-    gap: Spacing.three,
-    paddingBottom: BottomTabInset + Spacing.three,
-    maxWidth: MaxContentWidth,
-  },
-  heroSection: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    flex: 1,
-    paddingHorizontal: Spacing.four,
-    gap: Spacing.four,
+    backgroundColor: "#050816",
+    padding: 20,
   },
   title: {
-    textAlign: 'center',
+    color: "#7DF9FF",
+    fontSize: 26,
+    fontWeight: "bold",
+    marginBottom: 6,
   },
-  code: {
-    textTransform: 'uppercase',
+  subtitle: {
+    color: "#ccc",
+    fontSize: 16,
+    marginBottom: 20,
   },
-  stepContainer: {
-    gap: Spacing.three,
-    alignSelf: 'stretch',
-    paddingHorizontal: Spacing.three,
-    paddingVertical: Spacing.four,
-    borderRadius: Spacing.four,
+  grid: {
+    gap: 14,
+  },
+  card: {
+    backgroundColor: "#101935",
+    padding: 20,
+    borderRadius: 16,
+    borderWidth: 1,
+    borderColor: "#1F2A44",
+  },
+  cardDanger: {
+    borderColor: "#FF4D4D",
+  },
+  cardTitle: {
+    color: "#aaa",
+    fontSize: 14,
+  },
+  cardValue: {
+    color: "#fff",
+    fontSize: 28,
+    fontWeight: "bold",
+    marginTop: 8,
   },
 });
