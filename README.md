@@ -2,8 +2,6 @@
 
 ### Global Solution 2026.1 — Cross-Platform Application Development | FIAP
 
-![Banner](./assets/screenshots/banner.png)
-
 ---
 
 # 📖 Descrição
@@ -34,7 +32,7 @@ Visão geral dos indicadores da missão espacial.
 
 ## Dashboard de Sensores
 
-![Sensores](./assets/screenshots/sensores.png)
+![Sensores](./assets/screenshots/Sensores.png)
 
 Monitoramento dos sensores em tempo real.
 
@@ -42,7 +40,7 @@ Monitoramento dos sensores em tempo real.
 
 ## Dashboard de Energia
 
-![Energia](./assets/screenshots/energia.png)
+![Energia](./assets/screenshots/Energia.png)
 
 Indicadores de bateria e consumo energético.
 
@@ -50,7 +48,7 @@ Indicadores de bateria e consumo energético.
 
 ## Dashboard de Comunicação
 
-![Comunicação](./assets/screenshots/comunicaçao.png)
+![Comunicação](./assets/screenshots/Comunicaçao.png)
 
 Status da telemetria e qualidade do sinal.
 
@@ -58,7 +56,7 @@ Status da telemetria e qualidade do sinal.
 
 ## Sistema de Alertas
 
-![Alertas](./assets/screenshots/alertas.png)
+![Alertas](./assets/screenshots/Alertas.png)
 
 Alertas automáticos baseados em limites críticos.
 
@@ -66,7 +64,7 @@ Alertas automáticos baseados em limites críticos.
 
 ## Configurações
 
-![Configurações](./assets/screenshots/configuracoes.png)
+![Configurações](./assets/screenshots/Config.png)
 
 Formulário para configuração dos limites da missão.
 
