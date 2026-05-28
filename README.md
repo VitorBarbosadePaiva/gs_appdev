@@ -141,7 +141,7 @@ Escaneie o QR Code utilizando o aplicativo Expo Go.
 
 # 🎥 Vídeo de Demonstração
 
-[Clique aqui para assistir ao vídeo]([https://youtube.com/](https://youtu.be/1qpNQIHz89A))
+https://youtu.be/1qpNQIHz89A
 
 ---
 
